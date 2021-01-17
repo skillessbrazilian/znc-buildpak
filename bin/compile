@@ -13,8 +13,8 @@ if [ -f $2/znc-1.6.4.tar.gz ]; then
   cp -R /app/znc/ $1/
 else
   echo "-----> downloading and compile znc"
-  cd $2; curl -O http://znc.in/releases/znc-1.6.4.tar.gz
-  cd $2; tar zxvf znc-1.6.4.tar.gz
+  cd $2; curl -O https://znc.in/releases/archive/znc-1.6.4-rc1.tar.gz
+  cd $2; tar zxvf znc-1.6.4-rc1.tar.gz
   cd $2/znc-1.6.4; ./configure --prefix="/app/znc"
   cd $2/znc-1.6.4; make
   cd $2/znc-1.6.4; make install
